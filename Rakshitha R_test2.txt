@@ -1,0 +1,254 @@
+1.method overloading
+class Person
+{
+	
+
+	
+	static void person(String name)
+	{
+		System.out.println("name:"+name);
+	}
+	static void person(String name,int age)
+	{
+		System.out.println("name:"+name);
+		System.out.println("age:"+age);
+	}
+	static void person(int age,String place)
+	{
+		System.out.println("age:"+age)
+		System.out.println("place:"+place)
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println("running main in personinfo:");
+		
+		person("ramya");
+		person("rani",22);
+		person(23,"haveri");
+	}
+}
+
+2.variables are four types
+literals
+constructor
+method
+ref
+
+class Book
+{
+   public static void main(String[] args)
+  {
+    
+    String name = "java"
+    String cost = 200;
+
+     System.out.println("name:"+name);
+    System.out.println("cost:"+cost);
+
+   }
+}
+
+
+example for method
+class Car
+{
+  public void car(String name,int cost)
+{
+     this.name = name;
+     this.cost = cost;
+ }
+}
+
+class carRunner{
+
+public static void main(String[] args)
+{
+  Car car = new Car();
+  System.out.println(car.name);
+ System.out.println(car.cost);
+}
+
+}
+example for constructor
+class Baker
+{
+
+  String name = "raghav";
+  String place = "hasan";
+
+   Baker()
+  {
+     System.out.println("invoking the no argument value in Baker");
+   
+  }
+
+public static void main(String[] args)
+{
+
+ System.out.println("running main in baker");
+  System.out.println("name"+name);
+  System.out.println("place"+place);
+}
+
+}
+
+
+3.diffrence b/w heap and stack memory
+ stack memory is stores the variables constants and methods
+stack memory is address to the constant pool instance memory and meta space
+
+Heap memory is called as primary memory
+Heap memory is consist of metaspace, constant pool,instance memory and Stack frame.
+
+
+4. constructor overloading
+
+class Biscuits
+{
+
+  Biscuits()
+{
+  System.out.println("invoking the no argument constructors");
+}
+
+Biscuits(String name,int cost)
+{
+  System.out.println(invoking the String,int in constructor");
+   this.name = name;
+   this.cost = cost;
+}
+Biscuits(String type,double price)
+{
+   System.out.println("invoking the String,double in constructor");
+    this.type = type;
+    this.cost = cost;
+}
+
+}
+
+class BiscuitsRunner
+{
+  public static void main(String[] args)
+ {
+   Biscuits biscuits = new Biscuits();
+   Biscuits biscuits1 = new Biscuits("oreo",50);
+   Biscuits biscuits2 = new Biscuits("cream",60);
+}
+}
+
+
+5. instance method overloading
+class Car
+{
+	
+
+	
+	public void car(String name)
+	{
+		System.out.println("name:"+name);
+	}
+	public void car(String name,int price)
+	{
+		System.out.println("name:"+name);
+		System.out.println("price:"+price);
+	}
+	static void person(int price,String place)
+	{
+		System.out.println("price:"+price)
+		System.out.println("place:"+place)
+		
+	}
+	
+	public static void main(String[] args)
+	{
+		System.out.println("running main in personinfo:");
+		
+		person("hundai-exter");
+		person("swift",10000000);
+		person(5000000,"davanagere");
+	}
+}
+
+7. constructor chaining
+class Biscuits
+{
+
+  Biscuits()
+{
+  super();
+  System.out.println("invoking the no argument constructors");
+}
+
+Biscuits(String name,int cost)
+{
+  System.out.println(invoking the String,int in constructor");
+   this.name = name;
+   this.cost = cost;
+}
+Biscuits( String name,int cost,String type,double price)
+{
+   System.out.println("invoking the String,double in constructor");
+    this(name,cost,type);
+    this.cost = cost;
+}
+
+}
+
+class BiscuitsRunner
+{
+  public static void main(String[] args)
+ {
+   Biscuits biscuits = new Biscuits();
+   Biscuits biscuits1 = new Biscuits("oreo",50);
+   Biscuits biscuits2 = new Biscuits("oreo",50,"cream",60);
+}
+}
+6.static variable and static method
+
+class School
+{
+  public static void main(String[] args)
+{
+  static String name = "SRS school";
+  static String place = "davanagere";
+ 
+System.out.println("name"+name);
+System.out.println("place"+place);
+}
+
+}
+  
+
+ 
+   
+   
+
+
+
+
+
+
+
+
+  
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
